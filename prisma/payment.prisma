@@ -1,0 +1,14 @@
+model Payment {
+  id              String        @id @default(uuid())
+  rentalRequestId String        @unique
+  rentalRequest   RentalRequest @relation(fields: [rentalRequestId], references: [id])
+
+  tenantId String
+  tenant   User   @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+
+  amount        BigInt
+  provider      PaymentProvider @default(STRIPE)
+  transactionId String
+  status        PaymentStatus   @default(PENDING)
+  paidAt        DateTime        @default(now())
+}
