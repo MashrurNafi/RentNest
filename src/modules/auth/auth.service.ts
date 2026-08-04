@@ -49,7 +49,7 @@ const registerUserIntoDB = async (payload : IRegisterUser) => {
 
 }
 
-const loninUser = async (payload : ILoginUser) => {
+const loginUser = async (payload : ILoginUser) => {
 
     const { email, password } = payload;
     console.log(payload)
@@ -119,7 +119,7 @@ const getCurrentUserFormDB = async (id : string) => {
 
 
 export const authService = {
-    loninUser,
+    loginUser,
     registerUserIntoDB,
     getCurrentUserFormDB
     

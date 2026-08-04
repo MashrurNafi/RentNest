@@ -21,7 +21,7 @@ const registerUser = catchAsync(async (req: Request, res: Response, next : NextF
 const loginUser = catchAsync(async (req: Request, res: Response, next : NextFunction) => {
 
     const payload = req.body;
-    const {accessToken, refreshToken} = await authService.loninUser(payload);
+    const {accessToken, refreshToken} = await authService.loginUser(payload);
 
     res.cookie("accessToken", accessToken, {
         httpOnly: true,

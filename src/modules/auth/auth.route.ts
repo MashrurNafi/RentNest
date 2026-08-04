@@ -7,7 +7,7 @@ import { validateRequest } from "../../middlewares/validateRequest";
 const router = Router();
 
 router.post("/login", validateRequest(authValidation.loginValidationSchema) ,authController.loginUser); 
-router.post("/register", validateRequest(authValidation.registerValidationSchema), authController.registerUser)
+router.post("/register", validateRequest(authValidation.registerValidationSchema),authController.registerUser)
 router.get("/me",auth() , authController.getCurrentUser)
 
 export const authRoutes = router;
