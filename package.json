@@ -15,7 +15,7 @@
   "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "stripe:webhook": "stripe listen --forward-to http://localhost:5000/api/payments/confirm",
+    "stripe:webhook": "stripe listen --forward-to https://rent-nest-virid.vercel.app/api/payments/confirm",
     "dev": "tsx watch src/server.ts",
     "build": "prisma generate && tsup",
     "start": "node dist/server.js"
