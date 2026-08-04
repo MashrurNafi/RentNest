@@ -14,7 +14,7 @@ const registerUserIntoDB = async (payload: RegisterUserPayload) => {
 
   const hashedPassword = await bcrypt.hash(
     password,
-    Number(config.bcrypt_salt_rounds),
+    Number(config.bcrypt_salt_value),
   );
 
   const createdUser = await prisma.user.create({

@@ -14,7 +14,7 @@ app.use(
 );
 
 app.get("/", async (req: Request, res: Response) => {
-  res.send("RestNet Backend is Online!");
+  res.send("RentNest Backend is Online!");
 });
 
 app.use(express.json());
